@@ -43,13 +43,13 @@ for i in "${!comparisons[@]}"; do
    -mode Max_probe \
    -norm meandiv \
    -nperm 10000 \
-   -permute gene_set \
+   -permute gene_set \ # Suggested: phenotype
    -rnd_seed timestamp \
    -rnd_type no_balance \
    -scoring_scheme weighted \
    -rpt_label ${label} \
-   -metric log2_Ratio_of_Classes \
-   -sort real \
+   -metric log2_Ratio_of_Classes \ # Suggested: Signal2Noise
+   -sort real \ # Suggested: abs
    -order descending \
    -chip $chip_annotations/Human_Ensembl_Gene_ID_MSigDB.v2023.2.Hs.chip \
    -create_gcts false \
