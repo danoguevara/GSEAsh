@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Author: Daniel Guevara
-# dgdiaz011202@gmail.com
-# June 23rd, 2024
-
 # This script is intended to be used for multiple parallel GSEA runs.
 # Check gsea-cli.sh script for memory parameters.
 
@@ -17,15 +13,6 @@ matrix_dir=$working_dir/Human_Sets
 chip_annotations=$working_dir/Human_Annotations
 output_dir=$working_dir/C2_CGP
 
-# ------------------ #
-# Example for C2_CGP #
-# ------------------ #
-# Indications:
-# - Append comparison of interest to $phenotype_info
-# - Download GMX/GMT files from all collections and store them in $matrix_dir. Also include internal control file if needed.
-# - nperm: Number of permutation set to 10000. Test iniatilly with lower values.
-# - permute: Permuation type set to gene_set if study's phenotypes have less than 10 samples. Default: phenotype.
-# - metric: Metric for ranking genes. Use log2_Ratio_of_Classes when at least one of the comparison's phenotypes indicates less than 3 samples.
 
 comparisons=('A_versus_B')
 labels=('C2_CGP_A_B')
